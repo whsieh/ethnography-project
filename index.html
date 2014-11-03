@@ -1,0 +1,146 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Architecture 110ac">
+<meta name="author" content="Wenson Hsieh">
+
+<title>Ethnography Project</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="http://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="main.css" rel="stylesheet">
+<script src="js/bootstrap.min.js"></script>
+<script src="main.js"></script>
+
+</head>
+
+<body>
+
+    <img id="banner" src="images/banner.jpg"></img>
+
+    <h1 id="title">Redesigning Tzu Chi Academy</h1>
+    <h3 class="subtitle">I. The Layout</h3>
+    <p class="text">Tzu Chi Tri-Valley Academy, known colloquially as Tzu Chi Chinese School, borrows space from Pleasanton Middle School every Saturday. The K-12 school was founded in 2011, and is operated by the Taiwanese Buddhist organization "Tzu Chi." While there are less than 200 students in total, enrollment has risen quickly since its founding. My first step was to survey the site, starting with the layout.</p>
+
+    <div class="panel" id="layout-panel">
+        <img id="layout-image" src="diagrams/layout.png"></img>
+        <div id="layout-button-1" class="layout-button">1</div>
+        <div id="layout-button-2" class="layout-button">2</div>
+        <div id="layout-button-3" class="layout-button">3</div>
+        <div id="layout-button-4" class="layout-button">4</div>
+        <div id="layout-button-5" class="layout-button">5</div>
+    </div>
+
+    <div class="layout-button-panel" id="layout-button-panel-1">
+        <p>1.</p>
+        <p>Room 507, the administrative center of Tzu Chi Chinese School.</p>
+        <p>Supplies, such as whiteboards and staplers, are brought to this room every morning.</p>
+        <img id="room507" class="img-thumbnail" src="images/507.jpg"></img>
+        <br><br>
+        <a href="javascript:hideLayoutButtonPanel(1)">Close</a>
+    </div>
+
+    <div class="layout-button-panel" id="layout-button-panel-2">
+        <p>2.</p>
+        <p>Every month, students line up for free food here.</p>
+        <p>Students must bow and say "I'm grateful" in Chinese before receiving food.</p>
+        <img id="food_tables" class="img-thumbnail" src="images/food_tables.jpg"></img>
+        <br><br>
+        <a href="javascript:hideLayoutButtonPanel(2)">Close</a>
+    </div>
+
+    <div class="layout-button-panel" id="layout-button-panel-3">
+        <p>3.</p>
+        <p>Building directly in front of 507 with 4 classrooms.</p>
+        <p>Most of the buildings are identical or similar.</p>
+        <img id="classrooms" class="img-thumbnail" src="images/classrooms.jpg"></img>
+        <br><br>
+        <a href="javascript:hideLayoutButtonPanel(3)">Close</a>
+    </div>
+
+    <div class="layout-button-panel" id="layout-button-panel-4">
+        <p>4.</p>
+        <p>The common lunch area.</p>
+        <p>Students often congregate here during breaktime.</p>
+        <img id="lunch_tables" class="img-thumbnail" src="images/lunch_tables.jpg"></img>
+        <br><br>
+        <a href="javascript:hideLayoutButtonPanel(4)">Close</a>
+    </div>
+
+    <div class="layout-button-panel" id="layout-button-panel-5">
+        <p>5.</p>
+        <p>A walkway flanked by columns positioned in the center of the classrooms and room 507.</p>
+        <p>A potential new location for the food tables. This is me pushing supplies along to the admin building.</p>
+        <img id="supplies" class="img-thumbnail" src="images/supplies.jpg"></img>
+        <br><br>
+        <a href="javascript:hideLayoutButtonPanel(5)">Close</a>
+    </div>
+
+    <h3 class="subtitle">II. The Taxonomy</h3>
+    <p class="text">Through interviews with the staff, I compiled a vocabulary of special terms and concepts at Tzu Chi Chinese school, represented here as a directed graph. The interviews and this taxonomy helped me discover which terms are most important in the organization and consequently, which concepts, ideals, and values are most important in the Chinese school and Tzu Chi as a whole.</p>
+
+    <div class="panel" id="taxonomy-panel">
+        <img id="taxonomy" src="diagrams/taxonomy.png"></img>
+    </div>
+
+    <h3 class="subtitle">III. Classroom Redesign</h3>
+    <p class="text">I first set out to redesign the classroom environment. I noticed how some rooms were arranged in group format, while others were in lecture format. However, the instructors at Tzu Chi Chinese School all teach in a lecture format, making it hard for some students in group-oriented desks to see a particular whiteboard. To solve this, I introduce pivoting, sliding chairs to the classroom, which will allow students to quickly reorient themselves in any direction, supporting both groupwork- and lecture-oriented classroom layouts.</p>
+
+    <div class="panel" id="classroomredesign-panel">
+        <div id="classroomredesign-carousel" class="carousel slide" data-interval="false" data-ride="carousel">
+           <!-- Carousel items -->
+            <div class="carousel-inner">
+                <div class="active item">
+                    <img class="centered" id="classroom_4desks" style="height: 70%;" src="images/classroom_4desks.jpg"></img>
+                </div>
+                <div class="item">
+                    <img class="centered" id="mockup_current" style="height: 70%;" src="diagrams/mockup_current.png"></img>
+                </div>
+                <div class="item">
+                    <img class="centered" id="evans_chairs" style="height: 70%;" src="images/evans_chairs.png"></img>
+                </div>
+                <div class="item">
+                    <img class="centered" id="mockup_lecture" style="height: 70%;" src="diagrams/mockup_lecture.png"></img>
+                </div>
+                <div class="item">
+                    <img class="centered" id="mockup_group" style="height: 70%;" src="diagrams/mockup_group.png"></img>
+                </div>
+            </div>
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#classroomredesign-carousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="carousel-control right" href="#classroomredesign-carousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+        <div id="carousel-text-caption">
+            <p id="carousel-text">One of the many classrooms at Pleasanton Middle School. This is one of the rooms borrowed by Tzu Chi Chinese School. Many rooms have a similar group-oriented setup.</p>
+        </div>
+    </div>
+
+    <h3 class="subtitle">IV. Food Table Redesign</h3>
+    <p class="text">The monthly food tables are important events for both staff and students. Unfortunately, they are held in the small space outside Room 507 (marked 2 in the <a href="javascript:scrollToLayout()">above layout</a>) which tends to get very crowded inconveniencing both staff and students. As such, I plan to move the site of these food tables over to the main walkway. Not only does this provide more space, but it also allows Tzu Chi Chinese School to put students' projects on display, as well as use the extra space for fundraising and selling green merchandise.</p>
+
+    <div class="panel" id="food_redesign-panel">
+        <img id="food_redesign" src="diagrams/food_redesign.png"></img>
+    </div>
+
+    <div class="food_redesign_caption person" style="top: 45%" id="food_redesign_caption-1">:)</div>
+    <div class="food_redesign_caption person" style="top: 50%" id="food_redesign_caption-2">:P</div>
+    <div class="food_redesign_caption person" style="top: 55%" id="food_redesign_caption-3">:|</div>
+    <div class="food_redesign_caption person" style="top: 45%" id="food_redesign_caption-4">:]</div>
+    <div class="food_redesign_caption person" style="top: 50%" id="food_redesign_caption-5">:D</div>
+    <div class="food_redesign_caption person" style="top: 55%" id="food_redesign_caption-6">:(</div>
+    <div class="food_redesign_caption" id="food_redesign_caption-7">Students have more space to line up.</div>
+    <div class="food_redesign_caption" id="food_redesign_caption-8">They can also exit directly to the lunch tables.</div>
+
+    <div class="vspace"></div>
+    <script type="text/javascript">
+        document.body.onload = init;
+    </script>
+</body>
+</html>
