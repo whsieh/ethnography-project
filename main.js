@@ -1,3 +1,5 @@
+var layoutButtonScrollMin = 1100;
+var layoutButtonScrollMax =  1600;
 var layoutButtonsActive = false;
 var isAnimationActive = false;
 var currentState = "title";
@@ -169,12 +171,10 @@ function bindCarouselFunctions() {
 }
 
 function init() {
-
+    layoutButtonScrollMin = $("#layout-panel").offset().top - 250;
+    layoutButtonScrollMax = $("#layout-panel").offset().top + $("#layout-panel").height() / 3.0;
     bindMouseFunctionsForLayoutButtons();
     bindCarouselFunctions();
-    // $("body").animate({
-    //     scrollTop : 0
-    // }, 100);
     console.log("init");
     var imageScrollDistance = 2500;
     currentScrollTop = window.pageYOffset;
@@ -187,19 +187,19 @@ function init() {
     document.onscroll = function() {
         var deltaY = window.pageYOffset - currentScrollTop;
         currentScrollTop = window.pageYOffset;
-        if (!layoutButtonsActive && deltaY > 0 && currentScrollTop > 1100 && currentState == "title") {
+        if (!layoutButtonsActive && deltaY > 0 && currentScrollTop > layoutButtonScrollMin && currentState == "title") {
             if (showLayoutButtons())
                 currentState = "layout";
 
-        } else if (layoutButtonsActive && deltaY < 0 && currentScrollTop < 1100 && currentState == "layout") {
+        } else if (layoutButtonsActive && deltaY < 0 && currentScrollTop < layoutButtonScrollMin && currentState == "layout") {
             if (hideLayoutButtons())
                 currentState = "title";
 
-        } else if (layoutButtonsActive && deltaY > 0 && currentScrollTop > 1600 && currentState == "layout") {
+        } else if (layoutButtonsActive && deltaY > 0 && currentScrollTop > layoutButtonScrollMax && currentState == "layout") {
             if (hideLayoutButtons())
                 currentState = "taxonomy";
 
-        } else if (!layoutButtonsActive && deltaY < 0 && currentScrollTop < 1600 && currentState == "taxonomy") {
+        } else if (!layoutButtonsActive && deltaY < 0 && currentScrollTop < layoutButtonScrollMax && currentState == "taxonomy") {
             if (showLayoutButtons())
                 currentState = "layout";
 
